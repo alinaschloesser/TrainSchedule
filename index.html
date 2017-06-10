@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <title>Train Schedule</title>
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name=" viewport " content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <body>
+        <div class="container">
+            <br>
+            <!-- Jumbotron Title -->
+            <div class="jumbotron headings">
+                <h1 class="text-center">Train Schedule</h1>
+                <h4 class="text-center">Everybody is going somewhere</h4>
+            </div>
+            <div class="row">
+                <div class="col-md-12 ">
+                    <div class="panel panel-default ">
+                        <div class="panel-heading headings2">
+                            <h2 class="panel-title">Current Trains</h2>
+                        </div>
+                        <div class="panel-body">
+                            <!-- <div class=" table-responsive"> -->
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <thead>
+                                            <tr>
+                                                <th>Train Name</th>
+                                                <th>Destination</th>
+                                                <th>Frequency (min)</th>
+                                                <th>Next Arrival</th>
+                                                <th>Minutes Away</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="infoGoesHere">
+                                        </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" row">
+                <div class="col-md-12 ">
+                    <div class="panel panel-default">
+                        <div class=" panel-heading headings2">
+                            <h2 class="panel-title">Add Train</h2>
+                        </div>
+                        <div class=" panel-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for=" trianName">Train Name</label>
+                                    <input type="text" class=" form-control" id="trainName" placeholder=" Train Name">
+                                </div>
+                                <div class="form-group">
+                                    <label for=" Destination">Destination</label>
+                                    <input type="text" class=" form-control" id="destination" placeholder=" Destination">
+                                </div>
+                                <div class="form-group">
+                                    <label for=" FirstTrain">First Train - Military Time(00:00-23:59)</label>
+                                    <input type="HH:mm" class=" form-control" id="firstTrain" placeholder=" First Train Time">
+                                </div>
+                                <div class="form-group">
+                                    <label for="frequency">Frequency in Minutes</label>
+                                    <input type="text" class=" form-control" id="frequency" placeholder="Frequency">
+                                </div>
+                                <button type="submit" id="button" class="btn btn-default headings ">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- JavaScript -->
+            <script src="schedule.js ">
+            </script>
+    </body>
+
+</html>
